@@ -1,0 +1,18 @@
+---
+const startYear = 2021;
+const currentYear = new Date().getFullYear();
+const yearText =
+  startYear === currentYear ? startYear : `${startYear}-${currentYear}`;
+---
+
+<style>
+  footer p {
+    color: rgb(163 163 163);
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+</style>
+
+<footer>
+  <p>© {yearText} 子涵</p>
+</footer>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const pageTitle = "首页";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ul style="padding-left: 0;">
+    {
+      allPosts.map((post) => (
+        <BlogPost
+          url={post.url}
+          title={post.frontmatter.title}
+          pubDate={post.frontmatter.pubDate}
+        />
+      ))
+    }
+  </ul>
+</BaseLayout>

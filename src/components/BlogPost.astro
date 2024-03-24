@@ -1,0 +1,21 @@
+---
+const { title, url, pubDate } = Astro.props;
+---
+
+<style>
+  li {
+    /* 变成flex默认样式被清除了 */
+    display: flex;
+    align-items: center;
+    width: 100%; /* 确保占满父元素宽度 */
+  }
+
+  span {
+    color: rgb(163 163 163);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-right: 2rem;
+  }
+</style>
+
+<li><span>{pubDate.toString().slice(0, 10)}</span><a href={url}>{title}</a></li>

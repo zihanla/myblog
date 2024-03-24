@@ -1,0 +1,19 @@
+---
+// 使文章有基础布局
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<style>
+  p {
+    color: rgb(163 163 163);
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+</style>
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h2>{frontmatter.title}</h2>
+  <p>发布于：{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <slot />
+</BaseLayout>
