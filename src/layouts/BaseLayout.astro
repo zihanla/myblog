@@ -10,11 +10,17 @@ const { pageTitle } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!-- lxgw -->
     <link
       rel="stylesheet"
       href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css"
       media="print"
       onload="this.media='all'"
+    />
+    <!-- 代码高亮 -->
+    <link
+      rel="stylesheet"
+      href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism-themes/1.9.0/prism-shades-of-purple.min.css"
     />
     <title>{pageTitle}</title>
   </head>
