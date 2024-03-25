@@ -1,0 +1,22 @@
+---
+// Cusdis评论组件的Props定义
+interface CusdisProps {
+  pageId: string;
+  pageTitle: string;
+  pageUrl: string;
+}
+const { pageTitle, pageUrl } = Astro.props as CusdisProps;
+---
+
+<div>
+  <div
+    id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="3de11afd-617b-4490-9d2a-385a4f819fd8"
+    data-page-id={pageTitle}
+    data-page-url={pageUrl}
+    data-page-title={pageTitle}
+  >
+  </div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>

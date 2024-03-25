@@ -37,3 +37,10 @@ h6 {
 p {
   margin-bottom: 1em;
 }
+
+/* 定制markdown语法块 */
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 3px solid;
+}

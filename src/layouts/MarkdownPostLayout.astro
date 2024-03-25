@@ -1,14 +1,18 @@
 ---
 // 使文章有基础布局
 import BaseLayout from "./BaseLayout.astro";
+import Cusdis from "../components/Cusdis.astro";
 const { frontmatter } = Astro.props;
+const pageTitle = frontmatter.title;
+// 直接使用Astro.request.url来获取当前页面的完整URL
+const pageUrl = Astro.request.url;
 ---
 
 <style>
   p {
     color: rgb(163 163 163);
     font-size: 0.9rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 </style>
 
@@ -16,4 +20,5 @@ const { frontmatter } = Astro.props;
   <h2>{frontmatter.title}</h2>
   <p>发布于：{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <slot />
+  <Cusdis pageTitle={pageTitle} pageUrl={pageUrl} />
 </BaseLayout>
